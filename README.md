@@ -15,3 +15,10 @@
   - Gọi *dd[mask]* là số cặp *(i, j)* thõa mãn *(a[i] & a[j]) == mask*. Từ đó ta có thể dùng dpSOS để lưu *dd[mask]* thành số bộ *(i , j)* có *(a[i] & a[j])* là mask con của *mask*.
   - Từ đó, với mỗi bộ *(i, j)*, ta sẽ cần phải xóa các mask còn dư là *(a[i] & a[j])*.
   - Đáp án sẽ là *dd[2^(20) - 1 ^ (a[i] & a[j])]*;
+
+# Promblem E : 
+- Đầu tiên ta lưu lại các điểm là 'S' vào trong một cái vector.
+- Sau đó ta sẽ thực hiện bfs để tìm khoảng cách giữa các điểm S.
+- Sau đó ta sẽ bfs từ đỉnh (1, 1).
+- Sau đó ta sẽ thực hiện như bài toán tsp để tìm một hành trình đơn đi hết các đảo S mà tổng quảng đường là nhỏ nhất.
+
