@@ -14,4 +14,4 @@
 -  Để đếm nhanh số bộ *(p, q)* thõa. Ta có thể dùng cách như sau : 
   - Gọi *dd[mask]* là số cặp *(i, j)* thõa mãn *(a[i] & a[j]) == mask*. Từ đó ta có thể dùng dpSOS để lưu *dd[mask]* thành số bộ *(i , j)* có *(a[i] & a[j])* là mask con của *mask*.
   - Từ đó, với mỗi bộ *(i, j)*, ta sẽ cần phải xóa các mask còn dư là *(a[i] & a[j])*.
-  - => Đáp án sẽ là *dd[2^(20) - 1 ^ (a[i] & a[j])]*;
+  - Đáp án sẽ là *dd[2^(20) - 1 ^ (a[i] & a[j])]*;
