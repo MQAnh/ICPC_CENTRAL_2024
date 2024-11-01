@@ -22,3 +22,14 @@
 - Sau đó ta sẽ bfs từ đỉnh (1, 1).
 - Sau đó ta sẽ thực hiện như bài toán tsp để tìm một hành trình đơn đi hết các đảo S mà tổng quảng đường là nhỏ nhất.
 
+# Problem F : 
+- Ta sẽ chia nhóm người thành 2^3 - 1 nhóm thể hiện sở thích chung của mỗi người. (Nhóm thứ mask với bit 1 thể hiện người trong nhóm đó thích công ty thứ bit đó).
+- Ta có một nhận xét rằng vì giá trị của mỗi người là như nhau, điều đó đồng nghĩa là khi thay thế một người này bằng một người khác thì tổng giá trị cũng không đổi. Do đó ai có thể tham gia được thì ta cứ cho họ tham gia.
+- Ta thực hiện chiến thuật tham lam như sau : 
+- Các nhóm mà thích 1 công ty thì cứ tham gia.
+- Đôi với nhóm thích 2 công ty : 
+- Nếu nhóm thích công ty ab > lim[a] + lim[b]
+  - Thì cứ tham gia hết công ty a và b. Còn lại thì ai tham gia được công ty c thì cứ tham gia.
+- Nếu nhóm thích công ty ab < lim[a] + lim[b]
+  - Ta cố định có x người sẽ tham gia công ty A, suy ra sẽ có dd[ab] - x người thích tham gia công ty b. Từ đó ta sẽ tham theo kiểu với bc, ac, thì ai có thể tham gia a, b, c được thì cứ tham gia. (dd[ab] là số lượng người thích tham gia công ty ab).
+- Các nhóm mà thích 3 công ty thì có thể tham gia nhóm nào được thì cứ tham gia.
